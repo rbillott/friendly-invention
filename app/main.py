@@ -6,17 +6,14 @@ import flask
 import waitress
 
 from flask import jsonify, Flask, request
-from logging.config import dictConfig
+
 
 logger = logging.getLogger()
 def setup_logging():
-    #dictConfig({
-    #})    
     logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s', 
         level=logging.DEBUG)
 
 def jsonify_from_dict(d):
-    #res = convert_object_for_json_dict(d)
     return jsonify(d)
 
 def handle_calc_square():
